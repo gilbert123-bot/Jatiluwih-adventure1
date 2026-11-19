@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SUBAK QUEST - Jatiluwih Adventure</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6ed;
+  color: #244332;
+}
+
+/* HEADER */
+
+header {
+  background: #214b35;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+header h1 {
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+
+header p {
+  margin-top: 10px;
+  color: #dce8d8;
+  letter-spacing: 1px;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 35px 15px 15px;
+}
+
+.hero h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #68786c;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 20px;
+}
+
+.category-title {
+  text-align: center;
+  margin: 25px 0 20px;
+}
+
+/* CATEGORY CARDS */
+
+.selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.option {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  border: 2px solid #e1e8dc;
+  box-shadow: 0 5px 15px #0000000a;
+}
+
+.flag {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.option h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.option .subtitle {
+  color: #788579;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.price-list {
+  background: #f0f4e9;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.price-list p {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.price-list b {
+  color: #315f3c;
+  white-space: nowrap;
+}
+
+button {
+  background: #386b46;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #244b32;
+  transform: translateY(-2px);
+}
+
+.select-button {
+  width: 100%;
+}
+
+/* PACKAGE SECTION */
+
+#packages {
+  display: none;
+}
+
+.package-heading {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.package-heading h2 {
+  margin-bottom: 10px;
+}
+
+.package-heading p {
+  color: #788579;
+}
+
+.back-button {
+  background: #788879;
+  margin-top: 15px;
+}
+
+.package-card {
+  background: white;
+  padding: 23px;
+  border-radius: 15px;
+  margin: 18px 0;
+  border-left: 6px solid #719467;
+  box-shadow: 0 4px 12px #0000000a;
+}
+
+.package-card h3 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.package-card p {
+  color: #5d6e61;
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.package-price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #386b46;
+  margin: 17px 0;
+}
+
+.package-card button {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background: #214b35;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #dce8d8;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  .selection {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 27px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <h1>SUBAK QUEST</h1>
+  <p>THE JATILUWIH ADVENTURE</p>
+</header>
+
+<!-- MAIN CONTENT -->
+
+<main class="container">
+
+  <!-- CATEGORY SELECTION -->
+
+  <section id="choose">
+
+    <div class="hero">
+      <h2>Welcome to Jatiluwih!</h2>
+
+      <p>
+        Discover the beauty of Jatiluwih through an
+        interactive adventure. Explore rice terraces,
+        learn about Subak culture, complete exciting
+        quests, and earn exclusive rewards.
+      </p>
+    </div>
+
+    <h3 class="category-title">
+      Choose Your Visitor Category
+    </h3>
+
+    <div class="selection">
+
+      <!-- WNI -->
+
+      <div class="option">
+
+        <div class="flag">🇮🇩</div>
+
+        <h3>WNI</h3>
+
+        <p class="subtitle">
+          Wisatawan Domestik
+        </p>
+
+        <div class="price-list">
+          <p>Paket A <b>Rp75.000</b></p>
+          <p>Paket B <b>Rp115.000</b></p>
+          <p>Paket C <b>Rp150.000</b></p>
+          <p>Paket D <b>Rp300.000</b></p>
+          <p>Paket E <b>Rp500.000</b></p>
+        </div>
+
+        <button class="select-button"
+          onclick="showPackages('WNI')">
+          Pilih WNI
+        </button>
+
+      </div>
+
+      <!-- WNA -->
+
+      <div class="option">
+
+        <div class="flag">🌏</div>
+
+        <h3>WNA</h3>
+
+        <p class="subtitle">
+          International Visitors
+        </p>
+
+        <div class="price-list">
+          <p>Package A <b>Rp200.000</b></p>
+          <p>Package B <b>Rp300.000</b></p>
+          <p>Package C <b>Rp450.000</b></p>
+          <p>Package D <b>Rp600.000</b></p>
+          <p>Package E <b>Rp1.000.000</b></p>
+        </div>
+
+        <button class="select-button"
+          onclick="showPackages('WNA')">
+          Choose WNA
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PACKAGE DETAILS -->
+
+  <section id="packages">
+
+    <button class="back-button" onclick="goBack()">
+      ← Back / Ganti Kategori
+    </button>
+
+    <div class="package-heading">
+      <h2 id="categoryTitle"></h2>
+
+      <p>
+        Choose your adventure package in Jatiluwih!
+      </p>
+    </div>
+
+    <div id="packageList"></div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <h3>BEYOND THE LANDSCAPE</h3>
+
+  <p>
+    Preserve the Heritage. Inspire the Next Generation.
+  </p>
+
+  <p>
+    © 2026 SUBAK QUEST
+  </p>
+</footer>
+
+
+<script>
+
+// PACKAGE DATA
+
+const packages = [
+
+  {
+    name: "PAKET A",
+    distance: "2 km",
+    duration: "1 jam",
+    difficulty: "Paling cepat",
+    reward: "Reward kecil",
+    quest: "Quest sedikit",
+    wni: 75000,
+    wna: 200000
+  },
+
+  {
+    name: "PAKET B",
+    distance: "3,5 km",
+    duration: "1 jam 30 menit",
+    difficulty: "Lumayan cepat",
+    reward: "Reward sedang",
+    quest: "Quest sedikit",
+    wni: 115000,
+    wna: 300000
+  },
+
+  {
+    name: "PAKET C",
+    distance: "5 km",
+    duration: "2 jam",
+    difficulty: "Sedang",
+    reward: "Reward lumayan banyak + reward eksklusif",
+    quest: "Quest sedang",
+    wni: 150000,
+    wna: 450000
+  },
+
+  {
+    name: "PAKET D",
+    distance: "6 km",
+    duration: "3 jam",
+    difficulty: "Jauh dan lama",
+    reward: "Reward banyak + reward eksklusif",
+    quest: "Quest lumayan banyak",
+    wni: 300000,
+    wna: 600000
+  },
+
+  {
+    name: "PAKET E",
+    distance: "7 km",
+    duration: "4 jam",
+    difficulty: "Jauh dan lama",
+    reward: "Reward banyak + reward eksklusif + free guide",
+    quest: "Quest banyak",
+    wni: 500000,
+    wna: 1000000
+  }
+
+];
+
+
+// FORMAT RUPIAH
+
+function rupiah(number) {
+
+  return "Rp" + number.toLocaleString("id-ID");
+
+}
+
+
+// SHOW PACKAGE BASED ON CATEGORY
+
+function showPackages(category) {
+
+  document.getElementById("choose").style.display = "none";
+
+  document.getElementById("packages").style.display = "block";
+
+  const title = document.getElementById("categoryTitle");
+
+  if (category === "WNI") {
+
+    title.textContent = "🇮🇩 Paket Wisata WNI";
+
+  } else {
+
+    title.textContent = "🌏 International Visitor Packages";
+
+  }
+
+  const list = document.getElementById("packageList");
+
+  list.innerHTML = "";
+
+  packages.forEach(item => {
+
+    const price = category === "WNI"
+      ? item.wni
+      : item.wna;
+
+    const packageName = category === "WNI"
+      ? item.name
+      : item.name.replace("PAKET", "PACKAGE");
+
+    list.innerHTML += `
+
+      <div class="package-card">
+
+        <h3>${packageName}</h3>
+
+        <p>📍 Distance: ${item.distance}</p>
+
+        <p>⏱️ Duration: ${item.duration}</p>
+
+        <p>🥾 Difficulty: ${item.difficulty}</p>
+
+        <p>🎯 Quest: ${item.quest}</p>
+
+        <p>🎁 Rewards: ${item.reward}</p>
+
+        <div class="package-price">
+          ${rupiah(price)}
+        </div>
+
+        <button onclick="selectPackage('${packageName}', '${rupiah(price)}')">
+          Pilih Paket Ini
+        </button>
+
+      </div>
+
+    `;
+
+  });
+
+  window.scrollTo(0, 0);
+
+}
+
+
+// SELECT PACKAGE
+
+function selectPackage(name, price) {
+
+  alert(
+    "Kamu memilih " + name +
+    "\nHarga: " + price +
+    "\n\nTerima kasih telah memilih SUBAK QUEST!"
+  );
+
+}
+
+
+// BACK TO CATEGORY
+
+function goBack() {
+
+  document.getElementById("packages").style.display = "none";
+
+  document.getElementById("choose").style.display = "block";
+
+  window.scrollTo(0, 0);
+
+}
+
+</script>
+
+</body>
+</html>
